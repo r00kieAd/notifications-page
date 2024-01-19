@@ -179,4 +179,14 @@ a:link, a:visited, a:hover, a:active {
         transform: none;
     }
 
+    #x:hover, .notification p strong:hover, .n-sub:hover {
+        color: var(--main-blue);
+        cursor: pointer;
+    }
+    
+    #msg:hover {
+        background-color: var(--light-gray-blue);
+        cursor: pointer;
+    }
+
 }
