@@ -158,8 +158,13 @@ a:link, a:visited, a:hover, a:active {
     color: var(--dark-gray-blue);
 }
 
-#x:hover, #msg:hover, .notification p strong:hover, .n-sub:hover {
+#x:hover, .notification p strong:hover, .n-sub:hover {
     color: var(--main-blue);
+    cursor: pointer;
+}
+
+#msg:hover {
+    background-color: var(--light-gray-blue);
     cursor: pointer;
 }
 
