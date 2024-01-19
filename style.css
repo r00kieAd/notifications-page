@@ -1,12 +1,33 @@
+:root {
+    --main-bg-color: hsl(210, 60%, 98%);
+    --main-blue: hsl(219, 85%, 26%);
+    --main-red: hsl(1, 90%, 64%);
+    --light-gray-blue: hsl(211, 68%, 94%);
+    --light-gray-blue2: hsl(205, 33%, 90%);
+    --gray-blue: hsl(219, 14%, 63%);
+    --dark-gray-blue: hsl(219, 12%, 42%);
+    --dark-gray-blue2: hsl(224, 21%, 14%);
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    word-spacing: 2px;
+}
+
+
 #main {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid black;
-    padding: 10px;
+    border: 1px solid var(--main-bg-color);
+    border-radius: 10px;
+    padding: 16px;
     width: 35rem;
     height: auto;
+    background-color: white;
 }
 
 .top-panel {
@@ -14,11 +35,17 @@
     display: inline;
 }
 
+.top-panel span {
+    color: var(--dark-gray-blue2);
+    font-size: 18px;
+    font-weight: bolder;
+}
+
 #c {
     display: inline-block;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: black;
+    background-color: var(--main-blue);
     color: white;
     text-align: center;
     width: 20px !important;
@@ -28,6 +55,8 @@
 #x {
     position: relative;
     float: inline-end;
+    color: var(--dark-gray-blue);
+    font-weight: bolder;
 }
 
 .n {
@@ -39,8 +68,22 @@
 }
 
 .n-unread {
-    border: 1px solid gray;
+    border: 1px solid white;
     border-radius: 10px;
+    background-color: var(--light-gray-blue);
+}
+
+.dot {
+    position: relative;
+    border: 0.1px solid var(--main-red);
+    width: 5px;
+    height: 5px;
+    border-radius: 6px;
+    font-size: 5px;
+    color: var(--main-red);
+    vertical-align: middle;
+    bottom: 0.1vh;
+    background-color: var(--main-red);
 }
 
 .n-img {
@@ -58,9 +101,15 @@
     margin-right: 2%;
 }
 
+.n-img-2:hover {
+    cursor: pointer;
+    border: 3px solid var(--light-gray-blue);
+    border-radius: 10px;
+}
+
 .n-sub {
-    color: gray;
-    font-weight: 600;
+    color: var(--dark-gray-blue);
+    font-weight: bolder;
 }
 
 .notification {
@@ -72,17 +121,43 @@
 .notification p {
     margin: 1px;
     padding: 0;
+    color: var(--gray-blue);
+    font-weight: 600;
+}
+
+.notification p strong {
+    color: var(--dark-gray-blue2);
+    font-weight: 900;
 }
 
 .n-time {
-    color: gray;
+    color: var(--gray-blue);
+    font-size: 14px;
+    font-weight: 600;
 }
 
 #msg {
     position: relative;
     display: block;
-    border: 1px solid gray;
+    color: var(--dark-gray-blue);
+    font-weight: 600;
+    border: 1px solid var(--light-gray-blue2);
     border-radius: 5px;
     padding: 10px;
     margin-top: 5px;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: var(--main-blue);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.n-7 a:visited {
+    color: var(--dark-gray-blue);
+}
+
+#x:hover, #msg:hover, .notification p strong:hover, .n-sub:hover {
+    color: var(--main-blue);
+    cursor: pointer;
 }
