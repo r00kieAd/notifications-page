@@ -24,6 +24,7 @@ body {
     transform: translate(-50%, -50%);
     border: 1px solid var(--main-bg-color);
     border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--gray-blue);
     padding: 16px;
     width: 35rem;
     height: auto;
@@ -160,4 +161,17 @@ a:link, a:visited, a:hover, a:active {
 #x:hover, #msg:hover, .notification p strong:hover, .n-sub:hover {
     color: var(--main-blue);
     cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    #main {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+
 }
